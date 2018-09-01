@@ -10,7 +10,6 @@ class Application
       matchItem = @@items.detect { |a|
         a.name == item
       }
-      binding.pry
       if matchItem
         resp.write "#{matchItem.price}"
         resp.status = 200
