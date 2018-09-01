@@ -9,7 +9,7 @@ class application
       item = req.path.split("/songs/").last
       matchItem = @@item.detect { |a|
         a.name == item
-      end
+      }
       if matchItem
         resp.write "#{matchItem.price}"
         resp.status = 200
