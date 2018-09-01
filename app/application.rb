@@ -10,9 +10,8 @@ class Application
       matchItem = @@items.detect { |a|
         a.name == item
       }
-      price = matchItem.price
       if matchItem
-        resp.write "#{price}"
+        resp.write "#{matchItem.price}"
         resp.status = 200
       else
         resp.write "Item not found"
