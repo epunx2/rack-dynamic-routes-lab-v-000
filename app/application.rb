@@ -7,10 +7,11 @@ class Application
 
     if req.path.match(/items/)
       item = req.path.split("/items/").last
+      binding.pry
       matchItem = @@items.detect { |a|
         a.name == item
       }
-      binding.pry
+
       if matchItem
         resp.write "#{matchItem.price}"
         resp.status = 200
