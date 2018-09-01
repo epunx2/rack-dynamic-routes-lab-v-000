@@ -1,3 +1,4 @@
+require 'pry'
 class Application
   def call(env)
     resp = Rack::Response.new
@@ -7,7 +8,6 @@ class Application
 
     if req.path.match(/items/)
       item = req.path.split("/items/").last
-      binding.pry
       matchItem = @@items.detect { |a|
         a.name == item
       }
