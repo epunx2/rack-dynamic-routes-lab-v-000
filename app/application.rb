@@ -6,7 +6,7 @@ class application
     @@items = []
 
     if req.path.match(/items/)
-      item = req.path.split("/songs/").last
+      item = req.path.split("/items/").last
       matchItem = @@item.detect { |a|
         a.name == item
       }
