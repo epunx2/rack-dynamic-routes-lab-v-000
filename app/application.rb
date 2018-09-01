@@ -9,7 +9,7 @@ class application
       item = req.path.split("/items/").last
       matchItem = @@items.detect { |a|
         a.name == item
-
+      }
       price = matchItem.price
       if matchItem
         resp.write "#{price}"
